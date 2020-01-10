@@ -1,0 +1,24 @@
+View information about MODULE or METHOD in IEx shell
+> h IO.inspect 
+> h IO
+
+View information about VALUE in IEx shell
+> i ["a", "b"]
+
+
+
+PROJECT CREATION
+
+1. Create project
+mix new PROJECT_NAME
+
+2. iex -S mix
+
+3. Add dependency to recompile mix project automatically
+   {:remix, "~> 0.0.2", only: :dev}
+
+
+FILE TYPES
+
+*.ex - to be compiled
+*.exs - run without compiling

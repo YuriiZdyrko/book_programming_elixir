@@ -1,0 +1,19 @@
+Data types:
+    Value types:
+    - Integer
+    - Float
+    - Atom
+    - Range
+    - Regex
+
+    System types:
+    - PID
+    - References
+
+    Collection types:
+    - Tuples
+    - Lists
+    - Maps
+    - Binaries
+
+Strings are built using basic types (TODO - clarify)
