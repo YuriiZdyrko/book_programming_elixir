@@ -1,0 +1,13 @@
+Collectable is about putting items into some new structure.
+Enumerable is about taking items out from structure, and returning List.
+
+Collectable protocol allows "for" construct to be used.
+
+If inside for we return maps - they are merged into single map.
+
+If inside for we return non-maps - they are merged into array
+
+TODO: Investigate "Collectable.into"
+
+
+Collectable.into allows to insert Enumerable into Collection...

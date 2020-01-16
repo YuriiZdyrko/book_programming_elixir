@@ -1,0 +1,36 @@
+
+--- DIRECTIVES ----
+
+IMPORT
+
+Brings Module's functions & macros into current scope.
+
+Syntax:
+import Module [, only:|except: ]
+
+
+
+ALIAS
+
+alias My.Other.Module.Parser, as: Parser
+||
+alias My.Other.Module.Parser
+||
+alias My.Other.Module.{Parser, Runner}
+
+Reduce typing by using alias
+
+
+REQUIRE
+
+Brings Module's macros
+
+
+
+--- ATTRIBUTES ---
+
+They are metadata, associated with a module
+
+defmodule MyModule do
+    @my_attr "blah"
+end

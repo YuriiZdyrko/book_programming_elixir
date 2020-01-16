@@ -1,0 +1,12 @@
+To iterate over 
+
+collections (Enumerable protocol: List, Map, Charlist, Range, File, Stream, even Function (generator))
+
+use Enum and Stream modules.
+
+Stream has built-in generator functions:
+- Stream.cycle
+- Stream.unfold
+- Stream.iterate
+
+Most generic of all - Stream.resource/3

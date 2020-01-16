@@ -1,0 +1,33 @@
+Binary - sequence of bits
+
+Binary literal - << term,... >>
+
+8 Bits in one Byte mean that 250 numbers can be represented as a single Byte (term)
+
+'asdf' - Char list
+"asdf" - Binary (sequence of bytes in UTF-8 encoding)
+
+byte_size "юра" === 6
+byte_size "yur" === 3
+
+bit_size "1" == 8
+bit_size <<1>> == 8
+
+string == binary in documentation == Double quoted string
+
+String.valid? << 0x80, 0x81 >> == false
+String.valid? << 1, 3 >> == true
+
+
+String.at <<1, 3>>, 0 == 1
+String.last <<"asdf">> == "f"
+String.last << "asdf", "fdsa" >> == "a"
+<< "asdf", "fdsa" >> == "asdffdsa" TRUE
+
+
+Pattern matching:
+
+<< "asdf", a::binary >> = "asdffdsa"
+
+> a
+> "fdsa"

@@ -17,3 +17,55 @@ Data types:
     - Binaries
 
 Strings are built using basic types (TODO - clarify)
+
+
+Keyword Lists - used only for arguments
+
+"List of key/value pairs"
+
+[{:a, 1}, {:b, 2}, {:c, 3}]
+OR
+[a: 1, b: 2, c: 3]
+OR 
+some_fun(1, a: 1, b: 2)
+
+                   ┌──────────────┬────────────┬
+                   │ Keyword List │ Map/Struct │
+┌──────────────────┼──────────────┼────────────┼
+│ Duplicate keys   │ yes          │ no         │
+│ Ordered          │ yes          │ no         │
+│ Pattern matching │ yes          │ yes        │
+│ Performance¹     │ —            │ —          │
+│ ├ Insert         │ very fast²   │ fast³      │
+│ └ Access         │ slow⁵        │ fast³      │
+└──────────────────┴──────────────┴────────────┴
+
++ Keyword list have argument shorthand form:
+def some_fun(a, args \\ [a: 1])
+some_fun(1, a: "arg1", b: "arg2)
+
+
+
+-------
+
+Maps
+
+"Collection of key/value pairs or (dictionary)"
+
+Structs
+
+"Limited Maps":
+- keys must be atoms
+- keys are unchangeable
+
+Structs play role in Polymorphism through Protocols (TODO: find out)
+
+
+For nested updates/reads, use:
+get_in              no             (dict, keys)
+put_in              (path, value)  (dict, keys, value)
+update_in           (path, fn)     (dict, keys, fn)
+get_and_update_in   (path, fn)     (dict, keys, fn)
+
+These work on Keyword List as well.
+-------
