@@ -26,4 +26,10 @@ defmodule ForConstruct do
 
     %{a: 1, b: 2} |> Enum.into([])
   end
+
+  # AMAZING
+  def for_into_example do
+    for x <- ~w{ cat dog }, into: %{}, do: {x, String.upcase(x)}
+    #  %{"cat" => "CAT", "dog" => "DOG"}
+  end
 end
