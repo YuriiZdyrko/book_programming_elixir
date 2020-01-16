@@ -1,3 +1,54 @@
 Documentation on mix tasknames
 
 > mix help deps
+
+Package manager is called hex
+
+
+Logging:
+require Logger
+Logger.info("Got response: status code=#{status_code}")
+Logger.debug(fn -> inspect(body) end)
+
+19:53:44.207 [info] Fetching pragdave's project earmark
+19:53:44.804 [info] Got response: status code=200
+
+Depending on config.exs for :logger, [debug] logging info can be hidden
+
+---------------------------------------------------------------
+Awesome feature Doctest (running docs as tests)
+
+@doc """
+Given a list of rows, where each row contains a keyed list
+of columns, return a list containing lists of the data in
+each column. The `headers` parameter contains the
+list of columns to extract
+
+## Example
+iex> list = [Enum.into([{"a", "1"},{"b", "2"},{"c", "3"}], %{}),
+...>
+Enum.into([{"a", "4"},{"b", "5"},{"c", "6"}], %{})]
+iex> Issues.TableFormatter.split_into_columns(list, [ "a", "b", "c" ])
+[ ["1", "4"], ["2", "5"], ["3", "6"] ]
+"""
+
+def split_into_columns(rows, headers) do
+    for header <- headers do
+        for row <- rows, do: printable(row[header])
+    end
+end
+
+
+
+Relies on mix test test/doc_test.exs
+-------------------------------
+
+View all dependencies graph
+
+mix xref graph
+
+View all callers
+
+mix xref callers Logger
+
+
