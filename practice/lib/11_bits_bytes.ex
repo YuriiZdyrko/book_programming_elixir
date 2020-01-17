@@ -42,11 +42,9 @@ defmodule BitsBytes do
   end
 
   def read_file do
-      fixed_contents = "./assets/ch_11_p_225" \
-        |> File.stream! \
-        |> Stream.map(&String.trim/1)
-    
-    [row1 | rest] = fixed_contents |> Enum.to_list
+    fixed_contents = "./assets/ch_11_p_225" |> File.stream!() |> Stream.map(&String.trim/1)
+
+    [row1 | rest] = fixed_contents |> Enum.to_list()
 
     IO.inspect(row1)
     IO.inspect(rest)

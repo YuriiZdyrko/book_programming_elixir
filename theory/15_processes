@@ -1,0 +1,10 @@
+Elixir uses the actor model of concurrency. 
+An actor is an independent process
+that shares nothing with any other process. 
+
+You can spawn new processes, send
+them messages, and receive messages back. 
+
+And that’s it
+
+SPAWN-SEND-RECEIVE
