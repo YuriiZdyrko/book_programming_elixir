@@ -8,3 +8,18 @@ them messages, and receive messages back.
 And that’s it
 
 SPAWN-SEND-RECEIVE
+
+
+Linking (spawn_link):
+- works both directions
+- parent exit is prevented by Process.flag(:trap_exit, true), 
+  results in {:EXIT, pid, reason} message
+
+Monitoring (spawn_monitor, Process.monitor)
+- works in one direction
+- parent exit results in {:DOWN, monitor_ref, pid, reason} 
+
+-- ! --
+Process.monitor as opposed to spawn_monitor is used for existing processes.
+It's not atomic though, may cause race condition
+-- ! --
