@@ -208,34 +208,57 @@ defmodule PFib do
   # - Exits when receives :shutdown
 
   # Can be in Scheduler module
-  def run(nums \\ [2, 10, 100]) do
-    calculator_pid = spawn_link(__MODULE__, :calculator, [self()])
+  def run(nums \\ [2, 10, 15, 20, 30, 40], calculators \\ 3) do      
+    1..calculators 
+    |> Enum.map(fn _ -> 
+      spawn_link(__MODULE__, :calculator, [self()])
+    end)
+    |> loop(nums, [])
 
-    for num <- nums do
-      request_calculation(num)
-    end
 
-    send(calculator_pid, :shutdown)
+    # for num <- nums do
+    #   request_calculation(num)
+    # end
+
+    # listen(nums)
+
+    # calculators_pids
+    # |> Enum.each(fn pid -> 
+    #   send(pid, :shutdown)
+    # end)
+
+    # spawn_link each of available calculators
+
+    # > ready
+    # > ready
+    # > ready
+    # loop nums
+    # Loop, listen to ready in a loop and decrease remaining amount each time
   end
 
-  def request_calculation(num) do
-    IO.inspect "requested calculation for " <> to_string num
-
+  def loop(pids, queue, results) do
     receive do
-      {:ready, pid} ->
-        IO.inspect("received :ready")
-
-        IO.inspect("sending :fib" <> to_string(num))
-        send(pid, {:fib, num, self()})
-
-        receive do
-          {:answer, answer} ->
-            IO.inspect("received :answer")
-            IO.inspect(answer)
+      {:ready, calculator_pid} when length(queue) > 0 -> 
+        [h | t] = queue
+        send calculator_pid, {:fib, h, self()}
+        loop(pids, t, results)
+      {:ready, calculator_pid} when length(queue) == 0 ->
+        send calculator_pid, :shutdown
+        if (length(pids) > 1) do
+          loop(List.delete(pids, calculator_pid), queue, results)
+        else
+          results
+          |> Enum.sort(fn({n1, _}, {n2, _}) -> n1 >= n2 end)
+          |> IO.inspect()
         end
+      {:answer, n, result, calculator_pid} -> 
+        IO.inspect "Result for " <> to_string(n) <> "is:" <> to_string(result)
+        loop(pids, queue, [{n, result} | results])
+      other ->
+        IO.inspect "WAT"
+        IO.inspect other
     end
   end
-
 
   # Can be in Calculator module
   def calculator(scheduler_pid) do
@@ -245,7 +268,7 @@ defmodule PFib do
 
     receive do
       {:fib, n, scheduler_pid} ->
-        send(scheduler_pid, {:answer, fib(n)})
+        send(scheduler_pid, {:answer, n, fib(n), self()})
         calculator(scheduler_pid)
 
       {:shutdown} ->
