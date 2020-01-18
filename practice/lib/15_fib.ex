@@ -1,6 +1,6 @@
 defmodule SchedulerWorker do
   @doc "Initialization"
-  @callback initialize(pid) :: pid
+  @callback loop(pid) :: pid
 
   @doc "Performs calculations"
   @callback calculate(pid, any, pid) :: :ok
@@ -10,7 +10,6 @@ defmodule SchedulerWorker do
 end
 
 defmodule Fib.Scheduler do
-  alias Fib.Calculator
 
   # @calculator Fib.Calculator
   @calculator Fib.Finder
@@ -50,10 +49,17 @@ defmodule Fib.Scheduler do
     IO.inspect nums
 
     1..calculators
-    |> Enum.map(fn _ -> 
-        @calculator.initialize self()
-    end)
+    |> Enum.map(fn _ -> initialize_calculator() end)
     |> loop(Enum.into(nums, []), [])
+  end
+
+  def initialize_calculator do
+    scheduler_pid = self()
+    spawn_link(fn -> 
+        IO.inspect("sending :ready")
+        
+        @calculator.loop(scheduler_pid)
+    end)
   end
 
   def loop(pids, queue, results) do
@@ -88,17 +94,6 @@ end
 
 defmodule Fib.Calculator do
   @behaviour SchedulerWorker
-
-  @impl SchedulerWorker
-  def initialize(scheduler_pid) do
-    spawn_link(fn -> 
-        Process.sleep(:random.uniform 100)
-        IO.inspect("sending :ready")
-        
-        loop(scheduler_pid)
-    end)
-  end
-
   def loop(scheduler_pid) do
     send(scheduler_pid, {:ready, self()})
     receive do
@@ -140,15 +135,6 @@ end
 
 defmodule Fib.Finder do
   @behaviour SchedulerWorker
-
-  @impl SchedulerWorker
-  def initialize(scheduler_pid) do
-    spawn_link(fn -> 
-        IO.inspect("sending :ready")
-        
-        loop(scheduler_pid)
-    end)
-  end
 
   def loop(scheduler_pid) do
     send(scheduler_pid, {:ready, self()})
