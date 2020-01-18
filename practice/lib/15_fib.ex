@@ -12,7 +12,8 @@ end
 defmodule Fib.Scheduler do
   alias Fib.Calculator
 
-  @calculator Fib.Calculator
+  # @calculator Fib.Calculator
+  @calculator Fib.Finder
 
   # initialize Calculator process, send :ready to Scheduler
 
@@ -29,6 +30,14 @@ defmodule Fib.Scheduler do
   def benchmark do
     [1, 4, 8, 16, 32]
     |> Enum.map(&time(fn -> run(&1) end))
+  end
+
+  def benchmark_2 do
+    paths = File.ls!("lib")
+    |> Enum.map(&("lib/" <> &1))
+
+    [1, 4, 8, 16, 32]
+    |> Enum.map(&time(fn -> run(&1, paths) end))
   end
 
   def time(func) when is_function(func) do
@@ -121,4 +130,60 @@ defmodule Fib.Calculator do
 
   def fib(1), do: 1
   def fib(n), do: n * fib(n - 1)
+end
+
+
+
+
+
+
+
+defmodule Fib.Finder do
+  @behaviour SchedulerWorker
+
+  @impl SchedulerWorker
+  def initialize(scheduler_pid) do
+    spawn_link(fn -> 
+        IO.inspect("sending :ready")
+        
+        loop(scheduler_pid)
+    end)
+  end
+
+  def loop(scheduler_pid) do
+    send(scheduler_pid, {:ready, self()})
+    receive do
+        {:calculate, n, scheduler_pid} ->
+            # Make it slow
+            Process.sleep 50
+            
+            send(scheduler_pid, {:answer, n, find(n), self()})
+            loop(scheduler_pid)
+        :shutdown ->
+            IO.inspect "shutting down calculator"
+            exit(:normal)
+        other ->
+            IO.inspect "WAT?"
+    end
+  end
+
+  @impl SchedulerWorker
+  def calculate(pid, n, scheduler_pid) do
+    send(pid, {:calculate, n, scheduler_pid})
+    :ok
+  end
+
+  @impl SchedulerWorker
+  def shutdown(pid) do
+    send(pid, :shutdown)
+    :ok
+  end
+
+  def find(n) do
+    IO.inspect("checking file" <> to_string n)
+
+    File.read!(n)
+    |> String.graphemes 
+    |> Enum.count(& &1 == "a")
+  end
 end
