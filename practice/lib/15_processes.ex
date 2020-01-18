@@ -197,10 +197,6 @@ defmodule PMap do
 end
 
 defmodule PFib do
-  def run(nums \\ [234, 45, 546_456, 456_456]) do
-    scheduler nums
-  end
-
   # initialize Calculator process, send :ready to Scheduler
 
   # Scheduler receives :ready
@@ -211,31 +207,46 @@ defmodule PFib do
   # - sends :answer when done calculating
   # - Exits when receives :shutdown
 
-  def scheduler(nums) do
-    child_pid = spawn_link(__MODULE__, :calculator, [self()])
+  # Can be in Scheduler module
+  def run(nums \\ [2, 10, 100]) do
+    calculator_pid = spawn_link(__MODULE__, :calculator, [self()])
 
-    receive do
-        {:ready, pid} ->
-          for n <- nums do
-            send(child_pid, {:fib, n})
+    for num <- nums do
+      request_calculation(num)
+    end
 
-            receive do
-              {:answer, n} ->
-                IO.inspect("ANSWER")
-                IO.inspect(n)
-            end
-          end
-
-          send child_pid, :shutdown
-      end
+    send(calculator_pid, :shutdown)
   end
 
-  def calculator(parent_id) do
-    send(parent_id, {:ready, self()})
+  def request_calculation(num) do
+    IO.inspect "requested calculation for " <> to_string num
+
+    receive do
+      {:ready, pid} ->
+        IO.inspect("received :ready")
+
+        IO.inspect("sending :fib" <> to_string(num))
+        send(pid, {:fib, num, self()})
+
+        receive do
+          {:answer, answer} ->
+            IO.inspect("received :answer")
+            IO.inspect(answer)
+        end
+    end
+  end
+
+
+  # Can be in Calculator module
+  def calculator(scheduler_pid) do
+    Process.sleep(300)
+    IO.inspect("sending :ready")
+    send(scheduler_pid, {:ready, self()})
 
     receive do
       {:fib, n, scheduler_pid} ->
-        send(parent_id, {:answer, fib(n)})
+        send(scheduler_pid, {:answer, fib(n)})
+        calculator(scheduler_pid)
 
       {:shutdown} ->
         exit(:normal)

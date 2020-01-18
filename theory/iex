@@ -22,3 +22,7 @@ FILE TYPES
 
 *.ex - to be compiled
 *.exs - run without compiling
+
+
+SIMPLE EXECUTION (exs) or compilation (ex) USING IEx
+> iex file_name.exs or file_name.ex
