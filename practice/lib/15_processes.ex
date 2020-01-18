@@ -208,32 +208,23 @@ defmodule PFib do
   # - Exits when receives :shutdown
 
   # Can be in Scheduler module
-  def run(nums \\ [2, 10, 15, 20, 30, 40], calculators \\ 3) do      
+
+  def benchmark do
+    [1, 4, 8, 16, 32]
+    |> Enum.map(&(time(fn -> run(&1) end)))
+  end
+
+  def time(func) when is_function(func) do
+    {time, _} = :timer.tc(func)
+    "TIME: " <> "#{to_string(time/100000)}"
+  end
+
+  def run(calculators \\ 3, nums \\ 10..40) do      
     1..calculators 
     |> Enum.map(fn _ -> 
       spawn_link(__MODULE__, :calculator, [self()])
     end)
-    |> loop(nums, [])
-
-
-    # for num <- nums do
-    #   request_calculation(num)
-    # end
-
-    # listen(nums)
-
-    # calculators_pids
-    # |> Enum.each(fn pid -> 
-    #   send(pid, :shutdown)
-    # end)
-
-    # spawn_link each of available calculators
-
-    # > ready
-    # > ready
-    # > ready
-    # loop nums
-    # Loop, listen to ready in a loop and decrease remaining amount each time
+    |> loop(Enum.into(nums, []), [])
   end
 
   def loop(pids, queue, results) do
