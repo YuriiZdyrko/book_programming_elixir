@@ -1,8 +1,23 @@
 defmodule Sequence.Server do
     use GenServer
 
+    def test do
+        __MODULE__.start
+        __MODULE__.inc(10)
+        __MODULE__.inc(10)
+        __MODULE__.next_number()
+    end
+
     def start(number \\ 1) do
-        GenServer.start_link(__MODULE__, number, [debug: [:trace]])
+        GenServer.start_link(__MODULE__, number, [name: __MODULE__, debug: [:trace]])
+    end
+
+    def next_number do
+        GenServer.call(__MODULE__, :next_number)
+    end
+
+    def inc(delta) do
+        GenServer.cast(__MODULE__, {:inc, delta})
     end
 
     def init(initial_number) do

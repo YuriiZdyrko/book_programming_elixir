@@ -26,3 +26,34 @@ Print current state of process
 
 :sys.get_status pid
 !!USEFUL!!
+
+
+GenServer
+
+init(start_arguments)
+
+:: {:ok, state}
+:: {:stop, reason}
+:: {:ok, state, timeout} - sends process :timeout message if no
+message is received in [timeout] ms.
+
+handle_call(request, _from, state)
+:: {:reply, result, new_state [, :hibernate | timeout ]}
+:: {:stop, reason, result, new_state}
+
+handle_cast(request, state)
+:: {:noreply, new_state [, :hibernate | timeout ]}
+:: {:stop, reason, new_state}
+
+handle_info handles non "call" and "cast" messages.
+Examples: linked process termination, timeouts.
+
+handle_info(request, state)
+:: {:ok, state [, :hibernate | timeout ]}
+:: {:stop, reason, new_state}
+
+
+Naming a process
+
+II Local naming:
+Using [name: NAME] in GenServer.start_link options
