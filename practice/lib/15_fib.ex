@@ -172,7 +172,14 @@ defmodule Fib.Finder do
   end
 end
 
+
 defmodule FibAgent do
+  @moduledoc """
+  Example of non tail-recursive fibonacci calculator.
+  {:ok, agent} = FibAgent.start_link(); IO.puts FibAgent.fib(agent, 8)
+  """
+  import IEx
+
   def start_link do
     Agent.start_link(fn -> %{0 => 0, 1 => 1} end)
   end
@@ -184,12 +191,16 @@ defmodule FibAgent do
   defp do_fib(cache, n) do
     case cache[n] do
       nil ->
-        # 
+        IO.inspect("nil -> do_fib" <> to_string n)
         {n_1, cache} = do_fib(cache, n - 1)
+        IO.inspect(cache)
+        IO.inspect("nil -> n_1 + cache[n - 2]" <> to_string(n) <> "+" <> to_string(cache[n - 2]))
         result = n_1 + cache[n - 2]
         {result, Map.put(cache, n, result)}
       cached_value ->
-        {n, cached_value}
+        IO.inspect("{cached_value, ...}" <> to_string cached_value)
+        IO.inspect(cache)
+        {cached_value, cache}
     end
   end
 end
