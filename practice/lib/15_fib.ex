@@ -11,8 +11,13 @@ end
 
 defmodule Fib.Scheduler do
 
-  # @calculator Fib.Calculator
-  @calculator Fib.Finder
+  @moduledoc """
+  To run benchmark:
+  Fib.Scheduler.benchmark_2 + @calculator Fib.Finder
+  Fib.Scheduler.benchmark + @calculator Fib.Calculator
+  """
+  @calculator Fib.Calculator
+  # @calculator Fib.Finder
 
   # initialize Calculator process, send :ready to Scheduler
 
@@ -128,11 +133,6 @@ defmodule Fib.Calculator do
 end
 
 
-
-
-
-
-
 defmodule Fib.Finder do
   @behaviour SchedulerWorker
 
@@ -166,10 +166,30 @@ defmodule Fib.Finder do
   end
 
   def find(n) do
-    IO.inspect("checking file" <> to_string n)
-
     File.read!(n)
     |> String.graphemes 
     |> Enum.count(& &1 == "a")
+  end
+end
+
+defmodule FibAgent do
+  def start_link do
+    Agent.start_link(fn -> %{0 => 0, 1 => 1} end)
+  end
+
+  def fib(pid, n) do
+    Agent.get_and_update(pid, &do_fib(&1, n))
+  end
+
+  defp do_fib(cache, n) do
+    case cache[n] do
+      nil ->
+        # 
+        {n_1, cache} = do_fib(cache, n - 1)
+        result = n_1 + cache[n - 2]
+        {result, Map.put(cache, n, result)}
+      cached_value ->
+        {n, cached_value}
+    end
   end
 end
