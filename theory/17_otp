@@ -1,0 +1,7 @@
+OTP defines systems in terms of hierarchies of applications.
+
+Application = one or more processes
+
+These processes follow OTP behaviours (GenServer, GenSupervisor etc.).
+
+Each behariour implementation runs in it's own process.
