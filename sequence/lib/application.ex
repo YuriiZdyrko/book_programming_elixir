@@ -4,6 +4,8 @@ defmodule Sequence.Application do
 
   def start(_type, _args) do
     children = [
+      {Sequence.Stash, 1},
+      {Sequence.Server, 1},
       {Sequence.StackServer, [1, 2, 3]}
     ]
 

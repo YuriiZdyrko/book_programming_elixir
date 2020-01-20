@@ -51,6 +51,7 @@ defmodule Sequence.StackServer do
 
   def handle_info(:timeout, state) do
     IO.inspect("timed out after waiting @10_sec_timeout")
-    {:stop, :no_activity_for_10_secs, state}
+    # {:stop, :no_activity_for_10_secs, state}
+    {:noreply, state}
   end
 end

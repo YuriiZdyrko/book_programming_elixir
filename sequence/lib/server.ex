@@ -1,14 +1,19 @@
 defmodule Sequence.Server do
   use GenServer
 
+  @stash Sequence.Stash
+
   def test do
-    __MODULE__.start()
+    # __MODULE__.start()
     __MODULE__.inc(10)
     __MODULE__.inc(10)
     __MODULE__.next_number()
+    fail()
+    spawn(fn -> Process.sleep(1000); __MODULE__.next_number() end)
   end
 
-  def start(number \\ 1) do
+  def start_link(number \\ 1) do
+    IO.inspect("#{__MODULE__} started")
     GenServer.start_link(__MODULE__, number, name: __MODULE__, debug: [:trace])
   end
 
@@ -20,12 +25,13 @@ defmodule Sequence.Server do
     GenServer.cast(__MODULE__, {:inc, delta})
   end
 
-  def halt do
-    System.halt(0)
+  def fail do
+    GenServer.stop(__MODULE__, :not_normal)
   end
 
   def init(initial_number) do
-    {:ok, initial_number}
+    # {:ok, initial_number}
+    {:ok, Sequence.Stash.get()}
   end
 
   def handle_call(:next_number, _from, currrent_number) do
@@ -37,6 +43,7 @@ defmodule Sequence.Server do
   end
 
   def terminate(reason, state) do
-    IO.inspect("LOL")
+    IO.inspect("#{__MODULE__} terminated")
+    Sequence.Stash.update(state)
   end
 end
