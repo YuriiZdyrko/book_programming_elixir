@@ -5,3 +5,24 @@ Application = one or more processes
 These processes follow OTP behaviours (GenServer, GenSupervisor etc.).
 
 Each behariour implementation runs in it's own process.
+
+
+GenServer.start_link is similar to Process.spawn_link
+
+!!USEFUL!!
+GenServer.start_link(module, init_arg, [debug: [:trace]])
+
+or dynamically:
+iex> :sys.trace pid, true
+
+iex(31)> GenServer.call(pid, :next_number)
+*DBG* <0.244.0> got call next_number from <0.184.0>
+*DBG* <0.244.0> sent 12 to <0.184.0>, new state 13
+!!USEFUL!!
+
+
+!!USEFUL!!
+Print current state of process
+
+:sys.get_status pid
+!!USEFUL!!
