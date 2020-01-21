@@ -57,3 +57,18 @@ Naming a process
 
 II Local naming:
 Using [name: NAME] in GenServer.start_link options
+
+
+III Worker restart option
+use GenServer, restart: :transient
+
+Supervisor :strategy is triggered when worker is restarted.
+This depends on :restart option in child_spec/1 of worker.
+child_spec/1 calls Supervisor.child_spec/1 internally.
+Besides this, child_spec/0 specifies which function to start worker with (start_link is default)
+
+restart:
+
+:permanent - all reason (default in child_spec/1)
+:transient - any reason, except :normal
+:temporary - never restarted 
