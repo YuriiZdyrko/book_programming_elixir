@@ -72,3 +72,12 @@ restart:
 :permanent - all reason (default in child_spec/1)
 :transient - any reason, except :normal
 :temporary - never restarted 
+
+
+Application Architecture questions:
+
+What is the environment and what are its constraints?
+What are the obvious focal points?
+What are the runtime characteristics?
+What do I protect from errors?
+How do I get this thing running?
