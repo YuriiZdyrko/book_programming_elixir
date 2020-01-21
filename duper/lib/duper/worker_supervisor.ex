@@ -1,7 +1,7 @@
 defmodule Duper.WorkerSupervisor do
   use DynamicSupervisor
 
-  @me WorkerSupervisor
+  @me __MODULE__
 
   def start_link(_) do
     DynamicSupervisor.start_link(@me, :no_args, name: @me)
@@ -12,6 +12,6 @@ defmodule Duper.WorkerSupervisor do
   end
 
   def add_worker() do
-    {:ok, _pid} = DymanicSupervisor.start_child(@me, Duper.Worker)
+    {:ok, _pid} = DynamicSupervisor.start_child(@me, Duper.Worker)
   end
 end
