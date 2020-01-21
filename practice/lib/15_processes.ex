@@ -211,17 +211,17 @@ defmodule PFib do
 
   def benchmark do
     [1, 4, 8, 16, 32]
-    |> Enum.map(&(time(fn -> run(&1) end)))
+    |> Enum.map(&time(fn -> run(&1) end))
   end
 
   def time(func) when is_function(func) do
     {time, _} = :timer.tc(func)
-    "TIME: " <> "#{to_string(time/100000)}"
+    "TIME: " <> "#{to_string(time / 100_000)}"
   end
 
-  def run(calculators \\ 3, nums \\ 10..40) do      
-    1..calculators 
-    |> Enum.map(fn _ -> 
+  def run(calculators \\ 3, nums \\ 10..40) do
+    1..calculators
+    |> Enum.map(fn _ ->
       spawn_link(__MODULE__, :calculator, [self()])
     end)
     |> loop(Enum.into(nums, []), [])
@@ -229,25 +229,29 @@ defmodule PFib do
 
   def loop(pids, queue, results) do
     receive do
-      {:ready, calculator_pid} when length(queue) > 0 -> 
+      {:ready, calculator_pid} when length(queue) > 0 ->
         [h | t] = queue
-        send calculator_pid, {:fib, h, self()}
+        send(calculator_pid, {:fib, h, self()})
         loop(pids, t, results)
+
       {:ready, calculator_pid} when length(queue) == 0 ->
-        send calculator_pid, :shutdown
-        if (length(pids) > 1) do
+        send(calculator_pid, :shutdown)
+
+        if length(pids) > 1 do
           loop(List.delete(pids, calculator_pid), queue, results)
         else
           results
-          |> Enum.sort(fn({n1, _}, {n2, _}) -> n1 >= n2 end)
+          |> Enum.sort(fn {n1, _}, {n2, _} -> n1 >= n2 end)
           |> IO.inspect()
         end
-      {:answer, n, result, calculator_pid} -> 
-        IO.inspect "Result for " <> to_string(n) <> "is:" <> to_string(result)
+
+      {:answer, n, result, calculator_pid} ->
+        IO.inspect("Result for " <> to_string(n) <> "is:" <> to_string(result))
         loop(pids, queue, [{n, result} | results])
+
       other ->
-        IO.inspect "WAT"
-        IO.inspect other
+        IO.inspect("WAT")
+        IO.inspect(other)
     end
   end
 

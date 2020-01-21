@@ -113,3 +113,8 @@ To run:
 
 Measure time:
 time mix run --no-halt
+
+
+IIIIIIIIIIII
+Agents and Tasks are better if wrapped in modules.
+This would allow switching to GenServer if needed

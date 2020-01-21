@@ -10,7 +10,6 @@ defmodule SchedulerWorker do
 end
 
 defmodule Fib.Scheduler do
-
   @moduledoc """
   To run benchmark:
   Fib.Scheduler.benchmark_2 + @calculator Fib.Finder
@@ -37,8 +36,9 @@ defmodule Fib.Scheduler do
   end
 
   def benchmark_2 do
-    paths = File.ls!("lib")
-    |> Enum.map(&("lib/" <> &1))
+    paths =
+      File.ls!("lib")
+      |> Enum.map(&("lib/" <> &1))
 
     [1, 4, 8, 16, 32]
     |> Enum.map(&time(fn -> run(&1, paths) end))
@@ -50,8 +50,8 @@ defmodule Fib.Scheduler do
   end
 
   def run(calculators \\ 2, nums \\ 5..20) do
-    IO.inspect calculators
-    IO.inspect nums
+    IO.inspect(calculators)
+    IO.inspect(nums)
 
     1..calculators
     |> Enum.map(fn _ -> initialize_calculator() end)
@@ -60,10 +60,11 @@ defmodule Fib.Scheduler do
 
   def initialize_calculator do
     scheduler_pid = self()
-    spawn_link(fn -> 
-        IO.inspect("sending :ready")
-        
-        @calculator.loop(scheduler_pid)
+
+    spawn_link(fn ->
+      IO.inspect("sending :ready")
+
+      @calculator.loop(scheduler_pid)
     end)
   end
 
@@ -101,18 +102,21 @@ defmodule Fib.Calculator do
   @behaviour SchedulerWorker
   def loop(scheduler_pid) do
     send(scheduler_pid, {:ready, self()})
+
     receive do
-        {:calculate, n, scheduler_pid} ->
-            # Make it slow
-            Process.sleep 50
-            
-            send(scheduler_pid, {:answer, n, fib(n), self()})
-            loop(scheduler_pid)
-        :shutdown ->
-            IO.inspect "shutting down calculator"
-            exit(:normal)
-        other ->
-            IO.inspect "WAT?"
+      {:calculate, n, scheduler_pid} ->
+        # Make it slow
+        Process.sleep(50)
+
+        send(scheduler_pid, {:answer, n, fib(n), self()})
+        loop(scheduler_pid)
+
+      :shutdown ->
+        IO.inspect("shutting down calculator")
+        exit(:normal)
+
+      other ->
+        IO.inspect("WAT?")
     end
   end
 
@@ -132,24 +136,26 @@ defmodule Fib.Calculator do
   def fib(n), do: n * fib(n - 1)
 end
 
-
 defmodule Fib.Finder do
   @behaviour SchedulerWorker
 
   def loop(scheduler_pid) do
     send(scheduler_pid, {:ready, self()})
+
     receive do
-        {:calculate, n, scheduler_pid} ->
-            # Make it slow
-            Process.sleep 50
-            
-            send(scheduler_pid, {:answer, n, find(n), self()})
-            loop(scheduler_pid)
-        :shutdown ->
-            IO.inspect "shutting down calculator"
-            exit(:normal)
-        other ->
-            IO.inspect "WAT?"
+      {:calculate, n, scheduler_pid} ->
+        # Make it slow
+        Process.sleep(50)
+
+        send(scheduler_pid, {:answer, n, find(n), self()})
+        loop(scheduler_pid)
+
+      :shutdown ->
+        IO.inspect("shutting down calculator")
+        exit(:normal)
+
+      other ->
+        IO.inspect("WAT?")
     end
   end
 
@@ -167,11 +173,10 @@ defmodule Fib.Finder do
 
   def find(n) do
     File.read!(n)
-    |> String.graphemes 
-    |> Enum.count(& &1 == "a")
+    |> String.graphemes()
+    |> Enum.count(&(&1 == "a"))
   end
 end
-
 
 defmodule FibAgent do
   @moduledoc """
@@ -191,14 +196,15 @@ defmodule FibAgent do
   defp do_fib(cache, n) do
     case cache[n] do
       nil ->
-        IO.inspect("nil -> do_fib" <> to_string n)
+        IO.inspect("nil -> do_fib" <> to_string(n))
         {n_1, cache} = do_fib(cache, n - 1)
         IO.inspect(cache)
         IO.inspect("nil -> n_1 + cache[n - 2]" <> to_string(n) <> "+" <> to_string(cache[n - 2]))
         result = n_1 + cache[n - 2]
         {result, Map.put(cache, n, result)}
+
       cached_value ->
-        IO.inspect("{cached_value, ...}" <> to_string cached_value)
+        IO.inspect("{cached_value, ...}" <> to_string(cached_value))
         IO.inspect(cache)
         {cached_value, cache}
     end
