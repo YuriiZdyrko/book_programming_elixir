@@ -1,0 +1,441 @@
+Results:
+
+["../issues/deps/hackney/ebin/hackney_app.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_app.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_app.beam"]
+["../issues/_build/dev/lib/httpoison/ebin/Elixir.HTTPoison.Base.beam",
+ "../issues/_build/test/lib/httpoison/ebin/Elixir.HTTPoison.Base.beam"]
+["../issues/deps/hackney/ebin/hackney_sup.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_sup.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_sup.beam"]
+["../issues/_build/dev/lib/certifi/mix.rebar.config",
+ "../issues/_build/test/lib/certifi/mix.rebar.config"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encode.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encode.beam"]
+["../duper/_build/dev/lib/duper/ebin/Elixir.Duper.Results.beam",
+ "../duper/_build/test/lib/duper/ebin/Elixir.Duper.Results.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.Atom.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.Atom.beam"]
+["../issues/_build/dev/lib/issues/consolidated/Elixir.String.Chars.beam",
+ "../issues/_build/test/lib/issues/consolidated/Elixir.String.Chars.beam",
+ "../duper/_build/dev/lib/duper/consolidated/Elixir.String.Chars.beam",
+ "../duper/_build/test/lib/duper/consolidated/Elixir.String.Chars.beam",
+ "../practice/_build/dev/lib/practice/consolidated/Elixir.String.Chars.beam",
+ "../sequence/_build/dev/lib/sequence/consolidated/Elixir.String.Chars.beam"]
+["../issues/deps/idna/ebin/idna_mapping.beam",
+ "../issues/_build/dev/lib/idna/ebin/idna_mapping.beam",
+ "../issues/_build/test/lib/idna/ebin/idna_mapping.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.HashSet.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.HashSet.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.EncodeError.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.EncodeError.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Decoder.Any.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Decoder.Any.beam"]
+["../duper/_build/dev/lib/duper/ebin/Elixir.Duper.WorkerSupervisor.beam",
+ "../duper/_build/test/lib/duper/ebin/Elixir.Duper.WorkerSupervisor.beam"]
+["../issues/deps/idna/ebin/punycode.beam",
+ "../issues/_build/dev/lib/idna/ebin/punycode.beam",
+ "../issues/_build/test/lib/idna/ebin/punycode.beam"]
+["../issues/.formatter.exs", "../duper/.formatter.exs",
+ "../practice/.formatter.exs", "../sequence/.formatter.exs"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.BitString.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.BitString.beam"]
+["../issues/deps/mimerl/ebin/mimerl.app",
+ "../issues/_build/dev/lib/mimerl/ebin/mimerl.app",
+ "../issues/_build/test/lib/mimerl/ebin/mimerl.app"]
+["../issues/deps/hackney/ebin/hackney_util.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_util.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_util.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Decode.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Decode.beam"]
+["../issues/_build/dev/lib/issues/.mix/compile.protocols",
+ "../issues/_build/test/lib/issues/.mix/compile.protocols",
+ "../duper/_build/dev/lib/duper/.mix/compile.protocols",
+ "../duper/_build/test/lib/duper/.mix/compile.protocols",
+ "../practice/_build/dev/lib/practice/.mix/compile.protocols",
+ "../sequence/_build/dev/lib/sequence/.mix/compile.protocols"]
+["../practice/deps/remix/.hex", "../sequence/deps/remix/.hex"]
+["../practice/deps/remix/hex_metadata.config",
+ "../sequence/deps/remix/hex_metadata.config"]
+["../issues/deps/hackney/ebin/hackney_stream.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_stream.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_stream.beam"]
+["../issues/deps/hackney/ebin/hackney_local_tcp.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_local_tcp.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_local_tcp.beam"]
+["../issues/deps/certifi/ebin/certifi.app",
+ "../issues/_build/dev/lib/certifi/ebin/certifi.app",
+ "../issues/_build/test/lib/certifi/ebin/certifi.app"]
+["../issues/deps/hackney/ebin/hackney.app",
+ "../issues/_build/dev/lib/hackney/ebin/hackney.app",
+ "../issues/_build/test/lib/hackney/ebin/hackney.app"]
+["../issues/deps/hackney/ebin/hackney_date.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_date.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_date.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.NaiveDateTime.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.NaiveDateTime.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.MapSet.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.MapSet.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.Time.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.Time.beam"]
+["../issues/deps/parse_trans/.fetch", "../issues/deps/poison/.fetch",
+ "../issues/deps/certifi/.fetch", "../issues/deps/mimerl/.fetch",
+ "../issues/deps/unicode_util_compat/.fetch", "../issues/deps/httpoison/.fetch",
+ "../issues/deps/metrics/.fetch", "../issues/deps/idna/.fetch",
+ "../issues/deps/ssl_verify_fun/.fetch", "../issues/deps/hackney/.fetch",
+ "../issues/_build/dev/lib/parse_trans/.mix/compile.fetch",
+ "../issues/_build/dev/lib/issues/.mix/compile.lock",
+ "../issues/_build/dev/lib/poison/.mix/compile.fetch",
+ "../issues/_build/dev/lib/certifi/.mix/compile.fetch",
+ "../issues/_build/dev/lib/mimerl/.mix/compile.fetch",
+ "../issues/_build/dev/lib/unicode_util_compat/.mix/compile.fetch",
+ "../issues/_build/dev/lib/httpoison/.mix/compile.fetch",
+ "../issues/_build/dev/lib/metrics/.mix/compile.fetch",
+ "../issues/_build/dev/lib/idna/.mix/compile.fetch",
+ "../issues/_build/dev/lib/ssl_verify_fun/.mix/compile.fetch",
+ "../issues/_build/dev/lib/hackney/.mix/compile.fetch",
+ "../issues/_build/test/lib/parse_trans/.mix/compile.fetch",
+ "../issues/_build/test/lib/issues/.mix/compile.lock",
+ "../issues/_build/test/lib/poison/.mix/compile.fetch",
+ "../issues/_build/test/lib/certifi/.mix/compile.fetch",
+ "../issues/_build/test/lib/mimerl/.mix/compile.fetch",
+ "../issues/_build/test/lib/unicode_util_compat/.mix/compile.fetch",
+ "../issues/_build/test/lib/httpoison/.mix/compile.fetch",
+ "../issues/_build/test/lib/metrics/.mix/compile.fetch",
+ "../issues/_build/test/lib/idna/.mix/compile.fetch",
+ "../issues/_build/test/lib/ssl_verify_fun/.mix/compile.fetch",
+ "../issues/_build/test/lib/hackney/.mix/compile.fetch",
+ "../duper/deps/dir_walker/.fetch",
+ "../duper/_build/dev/lib/duper/.mix/compile.lock",
+ "../duper/_build/dev/lib/dir_walker/.mix/compile.fetch",
+ "../duper/_build/test/lib/duper/.mix/compile.lock",
+ "../duper/_build/test/lib/dir_walker/.mix/compile.fetch", "../duper/dups",
+ "../practice/deps/remix/.fetch",
+ "../practice/_build/dev/lib/remix/.mix/compile.fetch",
+ "../practice/_build/dev/lib/practice/.mix/compile.lock",
+ "../sequence/deps/remix/.fetch",
+ "../sequence/_build/dev/lib/remix/.mix/compile.fetch",
+ "../sequence/_build/dev/lib/sequence/.mix/compile.lock",
+ "../theory/documentation"]
+["../practice/deps/remix/README.md", "../sequence/deps/remix/README.md"]
+["../issues/deps/parse_trans/ebin/parse_trans_mod.beam",
+ "../issues/_build/dev/lib/parse_trans/ebin/parse_trans_mod.beam",
+ "../issues/_build/test/lib/parse_trans/ebin/parse_trans_mod.beam"]
+["../issues/_build/dev/lib/mimerl/mix.rebar.config",
+ "../issues/_build/test/lib/mimerl/mix.rebar.config"]
+["../issues/deps/unicode_util_compat/ebin/unicode_util_compat.beam",
+ "../issues/_build/dev/lib/unicode_util_compat/ebin/unicode_util_compat.beam",
+ "../issues/_build/test/lib/unicode_util_compat/ebin/unicode_util_compat.beam"]
+["../issues/deps/idna/ebin/idna_bidi.beam",
+ "../issues/_build/dev/lib/idna/ebin/idna_bidi.beam",
+ "../issues/_build/test/lib/idna/ebin/idna_bidi.beam"]
+["../issues/_build/dev/lib/httpoison/ebin/Elixir.HTTPoison.AsyncEnd.beam",
+ "../issues/_build/test/lib/httpoison/ebin/Elixir.HTTPoison.AsyncEnd.beam"]
+["../practice/_build/dev/lib/remix/.mix/compile.elixir",
+ "../sequence/_build/dev/lib/remix/.mix/compile.elixir"]
+["../issues/_build/dev/lib/poison/ebin/poison.app",
+ "../issues/_build/test/lib/poison/ebin/poison.app"]
+["../issues/_build/dev/lib/ssl_verify_fun/ebin/ssl_verify_pk.beam",
+ "../issues/_build/test/lib/ssl_verify_fun/ebin/ssl_verify_pk.beam"]
+["../practice/deps/remix/lib/remix.ex", "../sequence/deps/remix/lib/remix.ex"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.Stream.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.Stream.beam"]
+["../issues/deps/hackney/ebin/hackney_url.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_url.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_url.beam"]
+["../duper/_build/dev/lib/duper/ebin/Elixir.Duper.PathFinder.beam",
+ "../duper/_build/test/lib/duper/ebin/Elixir.Duper.PathFinder.beam"]
+["../duper/_build/dev/lib/duper/ebin/Elixir.Duper.beam",
+ "../duper/_build/test/lib/duper/ebin/Elixir.Duper.beam"]
+["../issues/deps/parse_trans/include/codegen.hrl",
+ "../issues/_build/dev/lib/parse_trans/include/codegen.hrl",
+ "../issues/_build/test/lib/parse_trans/include/codegen.hrl"]
+["../duper/_build/dev/lib/duper/ebin/Elixir.Duper.Gatherer.beam",
+ "../duper/_build/test/lib/duper/ebin/Elixir.Duper.Gatherer.beam"]
+["../issues/deps/hackney/include/hackney_lib.hrl",
+ "../issues/_build/dev/lib/hackney/include/hackney_lib.hrl",
+ "../issues/_build/test/lib/hackney/include/hackney_lib.hrl"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Pretty.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Pretty.beam"]
+["../issues/_build/dev/lib/httpoison/ebin/Elixir.HTTPoison.AsyncHeaders.beam",
+ "../issues/_build/test/lib/httpoison/ebin/Elixir.HTTPoison.AsyncHeaders.beam"]
+["../issues/deps/hackney/ebin/hackney_tcp.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_tcp.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_tcp.beam"]
+["../issues/deps/metrics/ebin/metrics_folsom.beam",
+ "../issues/_build/dev/lib/metrics/ebin/metrics_folsom.beam",
+ "../issues/_build/test/lib/metrics/ebin/metrics_folsom.beam"]
+["../issues/deps/hackney/ebin/hackney_http.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_http.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_http.beam"]
+["../issues/_build/dev/lib/issues/ebin/Elixir.Issues.beam",
+ "../issues/_build/test/lib/issues/ebin/Elixir.Issues.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.Date.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.Date.beam"]
+["../duper/_build/dev/lib/dir_walker/ebin/dir_walker.app",
+ "../duper/_build/test/lib/dir_walker/ebin/dir_walker.app"]
+["../issues/_build/dev/lib/httpoison/ebin/Elixir.HTTPoison.AsyncChunk.beam",
+ "../issues/_build/test/lib/httpoison/ebin/Elixir.HTTPoison.AsyncChunk.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.Any.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.Any.beam"]
+["../issues/_build/dev/lib/poison/.mix/compile.elixir_scm",
+ "../issues/_build/dev/lib/httpoison/.mix/compile.elixir_scm",
+ "../issues/_build/test/lib/poison/.mix/compile.elixir_scm",
+ "../issues/_build/test/lib/httpoison/.mix/compile.elixir_scm",
+ "../duper/_build/dev/lib/dir_walker/.mix/compile.elixir_scm",
+ "../duper/_build/test/lib/dir_walker/.mix/compile.elixir_scm",
+ "../practice/_build/dev/lib/remix/.mix/compile.elixir_scm",
+ "../sequence/_build/dev/lib/remix/.mix/compile.elixir_scm"]
+["../issues/deps/parse_trans/ebin/exprecs.beam",
+ "../issues/_build/dev/lib/parse_trans/ebin/exprecs.beam",
+ "../issues/_build/test/lib/parse_trans/ebin/exprecs.beam"]
+["../issues/_build/dev/lib/ssl_verify_fun/ebin/ssl_verify_fun_cert_helpers.beam",
+ "../issues/_build/test/lib/ssl_verify_fun/ebin/ssl_verify_fun_cert_helpers.beam"]
+["../issues/_build/dev/lib/ssl_verify_fun/ebin/ssl_verify_util.beam",
+ "../issues/_build/test/lib/ssl_verify_fun/ebin/ssl_verify_util.beam"]
+["../issues/deps/metrics/ebin/metrics.beam",
+ "../issues/_build/dev/lib/metrics/ebin/metrics.beam",
+ "../issues/_build/test/lib/metrics/ebin/metrics.beam"]
+["../duper/_build/dev/lib/duper/ebin/Elixir.Duper.Worker.beam",
+ "../duper/_build/test/lib/duper/ebin/Elixir.Duper.Worker.beam"]
+["../issues/_build/dev/lib/hackney/mix.rebar.config",
+ "../issues/_build/test/lib/hackney/mix.rebar.config"]
+["../issues/deps/hackney/ebin/hackney_trace.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_trace.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_trace.beam"]
+["../issues/_build/dev/lib/ssl_verify_fun/ebin/ssl_verify_fun.app",
+ "../issues/_build/test/lib/ssl_verify_fun/ebin/ssl_verify_fun.app"]
+["../issues/deps/hackney/ebin/hackney_connect.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_connect.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_connect.beam"]
+["../issues/_build/dev/lib/unicode_util_compat/mix.rebar.config",
+ "../issues/_build/test/lib/unicode_util_compat/mix.rebar.config"]
+["../issues/_build/dev/lib/issues/consolidated/Elixir.Poison.Decoder.beam",
+ "../issues/_build/test/lib/issues/consolidated/Elixir.Poison.Decoder.beam"]
+["../issues/deps/metrics/ebin/metrics_dummy.beam",
+ "../issues/_build/dev/lib/metrics/ebin/metrics_dummy.beam",
+ "../issues/_build/test/lib/metrics/ebin/metrics_dummy.beam"]
+["../issues/_build/dev/lib/httpoison/ebin/Elixir.HTTPoison.AsyncStatus.beam",
+ "../issues/_build/test/lib/httpoison/ebin/Elixir.HTTPoison.AsyncStatus.beam"]
+["../issues/deps/hackney/ebin/hackney_pool.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_pool.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_pool.beam"]
+["../issues/deps/parse_trans/ebin/ct_expand.beam",
+ "../issues/_build/dev/lib/parse_trans/ebin/ct_expand.beam",
+ "../issues/_build/test/lib/parse_trans/ebin/ct_expand.beam"]
+["../issues/deps/hackney/ebin/hackney_pool_handler.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_pool_handler.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_pool_handler.beam"]
+["../issues/_build/dev/lib/poison/.mix/compile.xref",
+ "../issues/_build/test/lib/poison/.mix/compile.xref"]
+["../issues/deps/hackney/ebin/hackney_multipart.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_multipart.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_multipart.beam"]
+["../issues/_build/dev/lib/issues/.mix/compile.xref",
+ "../issues/_build/dev/lib/httpoison/.mix/compile.xref",
+ "../issues/_build/test/lib/issues/.mix/compile.xref",
+ "../issues/_build/test/lib/httpoison/.mix/compile.xref",
+ "../duper/_build/dev/lib/duper/.mix/compile.xref",
+ "../duper/_build/dev/lib/dir_walker/.mix/compile.xref",
+ "../duper/_build/test/lib/duper/.mix/compile.xref",
+ "../duper/_build/test/lib/dir_walker/.mix/compile.xref",
+ "../practice/_build/dev/lib/remix/.mix/compile.xref",
+ "../practice/_build/dev/lib/practice/.mix/compile.xref",
+ "../sequence/_build/dev/lib/remix/.mix/compile.xref",
+ "../sequence/_build/dev/lib/sequence/.mix/compile.xref"]
+["../issues/_build/dev/lib/httpoison/ebin/Elixir.HTTPoison.AsyncResponse.beam",
+ "../issues/_build/test/lib/httpoison/ebin/Elixir.HTTPoison.AsyncResponse.beam"]
+["../practice/deps/remix/mix.exs", "../sequence/deps/remix/mix.exs"]
+["../issues/deps/hackney/ebin/hackney.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.SyntaxError.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.SyntaxError.beam"]
+["../issues/deps/certifi/ebin/certifi.beam",
+ "../issues/_build/dev/lib/certifi/ebin/certifi.beam",
+ "../issues/_build/test/lib/certifi/ebin/certifi.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.List.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.List.beam"]
+["../issues/deps/idna/ebin/idna_data.beam",
+ "../issues/_build/dev/lib/idna/ebin/idna_data.beam",
+ "../issues/_build/test/lib/idna/ebin/idna_data.beam"]
+["../issues/_build/dev/lib/issues/consolidated/Elixir.Enumerable.beam",
+ "../issues/_build/test/lib/issues/consolidated/Elixir.Enumerable.beam",
+ "../duper/_build/dev/lib/duper/consolidated/Elixir.Enumerable.beam",
+ "../duper/_build/test/lib/duper/consolidated/Elixir.Enumerable.beam",
+ "../practice/_build/dev/lib/practice/consolidated/Elixir.Enumerable.beam",
+ "../sequence/_build/dev/lib/sequence/consolidated/Elixir.Enumerable.beam"]
+["../issues/deps/hackney/ebin/hackney_ssl.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_ssl.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_ssl.beam"]
+["../issues/_build/dev/lib/parse_trans/mix.rebar.config",
+ "../issues/_build/test/lib/parse_trans/mix.rebar.config"]
+["../issues/deps/hackney/ebin/hackney_response.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_response.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_response.beam"]
+["../issues/deps/hackney/ebin/hackney_headers_new.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_headers_new.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_headers_new.beam"]
+["../issues/_build/dev/lib/httpoison/ebin/Elixir.HTTPoison.Response.beam",
+ "../issues/_build/test/lib/httpoison/ebin/Elixir.HTTPoison.Response.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.Map.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.Map.beam"]
+["../issues/deps/metrics/ebin/metrics_exometer.beam",
+ "../issues/_build/dev/lib/metrics/ebin/metrics_exometer.beam",
+ "../issues/_build/test/lib/metrics/ebin/metrics_exometer.beam"]
+["../issues/deps/mimerl/ebin/mimerl.beam",
+ "../issues/_build/dev/lib/mimerl/ebin/mimerl.beam",
+ "../issues/_build/test/lib/mimerl/ebin/mimerl.beam"]
+["../issues/_build/dev/lib/httpoison/ebin/Elixir.HTTPoison.beam",
+ "../issues/_build/test/lib/httpoison/ebin/Elixir.HTTPoison.beam"]
+["../issues/deps/unicode_util_compat/ebin/unicode_util_compat.app",
+ "../issues/_build/dev/lib/unicode_util_compat/ebin/unicode_util_compat.app",
+ "../issues/_build/test/lib/unicode_util_compat/ebin/unicode_util_compat.app"]
+["../issues/_build/dev/lib/issues/consolidated/Elixir.List.Chars.beam",
+ "../issues/_build/test/lib/issues/consolidated/Elixir.List.Chars.beam",
+ "../duper/_build/dev/lib/duper/consolidated/Elixir.List.Chars.beam",
+ "../duper/_build/test/lib/duper/consolidated/Elixir.List.Chars.beam",
+ "../practice/_build/dev/lib/practice/consolidated/Elixir.List.Chars.beam",
+ "../sequence/_build/dev/lib/sequence/consolidated/Elixir.List.Chars.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Parser.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Parser.beam"]
+["../issues/deps/hackney/ebin/hackney_headers.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_headers.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_headers.beam"]
+["../issues/_build/dev/lib/issues/.mix/compile.elixir_scm",
+ "../issues/_build/test/lib/issues/.mix/compile.elixir_scm",
+ "../duper/_build/dev/lib/duper/.mix/compile.elixir_scm",
+ "../duper/_build/test/lib/duper/.mix/compile.elixir_scm",
+ "../practice/_build/dev/lib/practice/.mix/compile.elixir_scm",
+ "../sequence/_build/dev/lib/sequence/.mix/compile.elixir_scm"]
+["../.git/logs/HEAD", "../.git/logs/refs/heads/master"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.beam"]
+["../duper/_build/dev/lib/dir_walker/.mix/compile.elixir",
+ "../duper/_build/test/lib/dir_walker/.mix/compile.elixir"]
+["../issues/deps/idna/ebin/idna_ucs.beam",
+ "../issues/_build/dev/lib/idna/ebin/idna_ucs.beam",
+ "../issues/_build/test/lib/idna/ebin/idna_ucs.beam"]
+["../issues/deps/certifi/priv/cacerts.pem",
+ "../issues/_build/dev/lib/certifi/priv/cacerts.pem",
+ "../issues/_build/test/lib/certifi/priv/cacerts.pem"]
+["../issues/deps/parse_trans/ebin/parse_trans_pp.beam",
+ "../issues/_build/dev/lib/parse_trans/ebin/parse_trans_pp.beam",
+ "../issues/_build/test/lib/parse_trans/ebin/parse_trans_pp.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.Range.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.Range.beam"]
+["../issues/deps/parse_trans/ebin/parse_trans_codegen.beam",
+ "../issues/_build/dev/lib/parse_trans/ebin/parse_trans_codegen.beam",
+ "../issues/_build/test/lib/parse_trans/ebin/parse_trans_codegen.beam"]
+["../issues/_build/dev/lib/ssl_verify_fun/ebin/ssl_verify_string.beam",
+ "../issues/_build/test/lib/ssl_verify_fun/ebin/ssl_verify_string.beam"]
+["../issues/deps/parse_trans/ebin/parse_trans.app",
+ "../issues/_build/dev/lib/parse_trans/ebin/parse_trans.app",
+ "../issues/_build/test/lib/parse_trans/ebin/parse_trans.app"]
+["../issues/_build/dev/lib/httpoison/ebin/Elixir.HTTPoison.AsyncRedirect.beam",
+ "../issues/_build/test/lib/httpoison/ebin/Elixir.HTTPoison.AsyncRedirect.beam"]
+["../issues/test/test_helper.exs", "../duper/test/test_helper.exs",
+ "../practice/test/test_helper.exs", "../sequence/test/test_helper.exs"]
+["../issues/_build/dev/lib/issues/ebin/Elixir.Issues.GithubIssues.beam",
+ "../issues/_build/test/lib/issues/ebin/Elixir.Issues.GithubIssues.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.Integer.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.Integer.beam"]
+["../issues/deps/hackney/ebin/hackney_request.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_request.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_request.beam"]
+["../issues/_build/dev/lib/idna/mix.rebar.config",
+ "../issues/_build/test/lib/idna/mix.rebar.config"]
+["../issues/_build/dev/lib/ssl_verify_fun/ebin/ssl_verify_fingerprint.beam",
+ "../issues/_build/test/lib/ssl_verify_fun/ebin/ssl_verify_fingerprint.beam"]
+["../issues/_build/dev/lib/ssl_verify_fun/ebin/ssl_verify_hostname.beam",
+ "../issues/_build/test/lib/ssl_verify_fun/ebin/ssl_verify_hostname.beam"]
+["../issues/deps/idna/ebin/idna_context.beam",
+ "../issues/_build/dev/lib/idna/ebin/idna_context.beam",
+ "../issues/_build/test/lib/idna/ebin/idna_context.beam"]
+["../issues/deps/parse_trans/include/exprecs.hrl",
+ "../issues/_build/dev/lib/parse_trans/include/exprecs.hrl",
+ "../issues/_build/test/lib/parse_trans/include/exprecs.hrl"]
+["../issues/deps/parse_trans/ebin/parse_trans.beam",
+ "../issues/_build/dev/lib/parse_trans/ebin/parse_trans.beam",
+ "../issues/_build/test/lib/parse_trans/ebin/parse_trans.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Decoder.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Decoder.beam"]
+["../issues/_build/dev/lib/issues/consolidated/Elixir.Collectable.beam",
+ "../issues/_build/test/lib/issues/consolidated/Elixir.Collectable.beam",
+ "../duper/_build/dev/lib/duper/consolidated/Elixir.Collectable.beam",
+ "../duper/_build/test/lib/duper/consolidated/Elixir.Collectable.beam",
+ "../practice/_build/dev/lib/practice/consolidated/Elixir.Collectable.beam",
+ "../sequence/_build/dev/lib/sequence/consolidated/Elixir.Collectable.beam"]
+["../issues/_build/dev/lib/httpoison/ebin/Elixir.HTTPoison.Error.beam",
+ "../issues/_build/test/lib/httpoison/ebin/Elixir.HTTPoison.Error.beam"]
+["../issues/deps/idna/ebin/idna_table.beam",
+ "../issues/_build/dev/lib/idna/ebin/idna_table.beam",
+ "../issues/_build/test/lib/idna/ebin/idna_table.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.DateTime.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.DateTime.beam"]
+["../practice/mix.lock", "../sequence/mix.lock"]
+["../duper/_build/dev/lib/duper/ebin/duper.app",
+ "../duper/_build/test/lib/duper/ebin/duper.app"]
+["../practice/deps/remix/LICENSE", "../sequence/deps/remix/LICENSE"]
+["../issues/deps/idna/ebin/idna.beam",
+ "../issues/_build/dev/lib/idna/ebin/idna.beam",
+ "../issues/_build/test/lib/idna/ebin/idna.beam"]
+["../issues/deps/parse_trans/rebar.lock", "../issues/deps/mimerl/rebar.lock",
+ "../issues/deps/metrics/rebar.lock"]
+["../issues/_build/dev/lib/issues/consolidated/Elixir.Poison.Encoder.beam",
+ "../issues/_build/test/lib/issues/consolidated/Elixir.Poison.Encoder.beam"]
+["../practice/_build/dev/lib/remix/ebin/remix.app",
+ "../sequence/_build/dev/lib/remix/ebin/remix.app"]
+["../issues/_build/dev/lib/issues/consolidated/Elixir.Inspect.beam",
+ "../issues/_build/test/lib/issues/consolidated/Elixir.Inspect.beam",
+ "../duper/_build/dev/lib/duper/consolidated/Elixir.Inspect.beam",
+ "../duper/_build/test/lib/duper/consolidated/Elixir.Inspect.beam",
+ "../practice/_build/dev/lib/practice/consolidated/Elixir.Inspect.beam",
+ "../sequence/_build/dev/lib/sequence/consolidated/Elixir.Inspect.beam"]
+["../issues/deps/hackney/include/hackney.hrl",
+ "../issues/_build/dev/lib/hackney/include/hackney.hrl",
+ "../issues/_build/test/lib/hackney/include/hackney.hrl"]
+["../issues/_build/test/lib/issues/.mix/.mix_test_failures",
+ "../duper/_build/test/lib/duper/.mix/.mix_test_failures"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.Float.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.Float.beam"]
+["../issues/deps/hackney/ebin/hackney_cookie.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_cookie.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_cookie.beam"]
+["../issues/deps/idna/ebin/idna.app",
+ "../issues/_build/dev/lib/idna/ebin/idna.app",
+ "../issues/_build/test/lib/idna/ebin/idna.app"]
+["../issues/deps/metrics/ebin/metrics.app",
+ "../issues/_build/dev/lib/metrics/ebin/metrics.app",
+ "../issues/_build/test/lib/metrics/ebin/metrics.app"]
+["../issues/_build/dev/lib/ssl_verify_fun/ebin/ssl_verify_fun_encodings.beam",
+ "../issues/_build/test/lib/ssl_verify_fun/ebin/ssl_verify_fun_encodings.beam"]
+["../issues/deps/hackney/ebin/hackney_http_connect.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_http_connect.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_http_connect.beam"]
+["../issues/deps/hackney/ebin/hackney_socks5.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_socks5.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_socks5.beam"]
+["../issues/deps/hackney/ebin/hackney_metrics.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_metrics.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_metrics.beam"]
+["../issues/_build/dev/lib/issues/consolidated/Elixir.IEx.Info.beam",
+ "../issues/_build/test/lib/issues/consolidated/Elixir.IEx.Info.beam",
+ "../duper/_build/dev/lib/duper/consolidated/Elixir.IEx.Info.beam",
+ "../duper/_build/test/lib/duper/consolidated/Elixir.IEx.Info.beam",
+ "../practice/_build/dev/lib/practice/consolidated/Elixir.IEx.Info.beam",
+ "../sequence/_build/dev/lib/sequence/consolidated/Elixir.IEx.Info.beam"]
+["../issues/deps/hackney/ebin/hackney_manager.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_manager.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_manager.beam"]
+["../issues/_build/dev/lib/poison/ebin/Elixir.Poison.Encoder.beam",
+ "../issues/_build/test/lib/poison/ebin/Elixir.Poison.Encoder.beam"]
+["../issues/_build/dev/lib/httpoison/ebin/httpoison.app",
+ "../issues/_build/test/lib/httpoison/ebin/httpoison.app"]
+["../issues/deps/hackney/ebin/hackney_bstr.beam",
+ "../issues/_build/dev/lib/hackney/ebin/hackney_bstr.beam",
+ "../issues/_build/test/lib/hackney/ebin/hackney_bstr.beam"]
+["../duper/_build/dev/lib/dir_walker/ebin/Elixir.DirWalker.beam",
+ "../duper/_build/test/lib/dir_walker/ebin/Elixir.DirWalker.beam"]
+["../issues/_build/dev/lib/metrics/mix.rebar.config",
+ "../issues/_build/test/lib/metrics/mix.rebar.config"]

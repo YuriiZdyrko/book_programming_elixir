@@ -19,3 +19,15 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/duper](https://hexdocs.pm/duper).
 
+
+
+<!-- INIT -->
+time mix run --no-halt
+
+OR 
+
+iex -S mix
+
+
+<!-- Play with path and number of workers in application.ex -->
+

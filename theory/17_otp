@@ -81,3 +81,35 @@ What are the obvious focal points?
 What are the runtime characteristics?
 What do I protect from errors?
 How do I get this thing running?
+
+IIII Duper
+
+DynamicSupervisor = obsolete :simple_one_for_one strategy
+
+IIIII Let inIT be!
+When we'are initializing the server, we should not interact with 
+anything that uses that server. 
+Use this instead: Process.send_after(self(), :kickoff, 0)
+
+
+IIIIIII Enforcing order
+A - Dynamic number of workers (DynamicSupervisor)
+Add workers during init + timeout
+
+B - Static number of workers
+Use order of children in Supervisor children list
+
+
+IIIIIIII Additional work after responding to handle_call
+Process.send_after(self(), :do_one_more, 0)
+
+IIIIIIIII
+Use System.halt(0) to stop the system
+
+
+To run:
+- iex -S mix
+- mix run --no-halt
+
+Measure time:
+time mix run --no-halt
