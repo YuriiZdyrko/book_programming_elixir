@@ -49,3 +49,25 @@ defimpl Caesar, for: List do
 
   def rot13(list), do: encrypt(list, 13)
 end
+
+
+
+defmodule ReducePower do
+    def reduce_map(list, fun) do
+        list
+        |> Enum.reduce([], fn(curr, acc) -> 
+            acc ++ [fun.(curr)]
+        end)
+    end
+
+    def reduce_filter(list, fun) do
+        list
+        |> Enum.reduce([], fn(curr, acc) -> 
+            if (fun.(curr)) do
+                acc ++ [curr]
+            else
+                acc
+            end
+        end)
+    end
+end

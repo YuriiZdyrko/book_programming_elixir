@@ -25,3 +25,22 @@ Tuple
 +
 
 custom Structs
+
+
+Built-in protocols:
+Enumerable and Collectable
+Inspect
+List.Chars
+String.Chars
+
+
+Inspect protocol can be omitted by passing to inspect/1 option "structs: false"
+
+As in
+iex(3)> inspect MapSet.new([1, 3]), structs: false
+"%{__struct__: MapSet, map: %{1 => [], 3 => []}, version: 2}"
+
+versus
+
+inspect MapSet.new([1, 3])                
+"#MapSet<[1, 3]>"
