@@ -28,36 +28,36 @@ defmodule Dictionary do
     do: word |> to_charlist |> Enum.sort() |> to_string
 end
 
-
 defmodule WordListLoader do
-    @moduledoc """
-    Example of using Task
-    """
+  @moduledoc """
+  Example of using Task
+  """
 
-    @doc """
-    Stream.map + Task.async = ❤
-    """
-    def load_from_files(file_names) do
-        file_names
-        |> Stream.map(fn name -> Task.async(fn -> load_task(name) end) end)
-        |> Enum.map(&Task.await/1)
-    end
+  @doc """
+  Stream.map + Task.async = ❤
+  """
+  def load_from_files(file_names) do
+    file_names
+    |> Stream.map(fn name -> Task.async(fn -> load_task(name) end) end)
+    |> Enum.map(&Task.await/1)
+  end
 
-    defp load_task(file_name) do
-        File.stream!(file_name, [], :line)
-        |> Enum.map(&String.trim/1)
-        |> Dictionary.add_words
-    end
+  defp load_task(file_name) do
+    File.stream!(file_name, [], :line)
+    |> Enum.map(&String.trim/1)
+    |> Dictionary.add_words()
+  end
 end
 
 defmodule AnagramTest do
-    def run do
-        Dictionary.start_link
+  def run do
+    Dictionary.start_link()
 
-        paths = ~w(1 2 3 4)
-        |> Enum.map(fn filename -> "./assets/anagram/" <> filename end) 
-        |> WordListLoader.load_from_files
+    paths =
+      ~w(1 2 3 4)
+      |> Enum.map(fn filename -> "./assets/anagram/" <> filename end)
+      |> WordListLoader.load_from_files()
 
-        Dictionary.anagrams_of "organ"
-    end
+    Dictionary.anagrams_of("organ")
+  end
 end

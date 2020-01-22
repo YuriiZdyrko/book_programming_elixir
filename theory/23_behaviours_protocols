@@ -1,0 +1,27 @@
+Type specifications > doctests > docs > comments.
+
+Behaviour is a module with a @callback definitions.
+Behaviours are often applied through "use" keyword.
+Behaviours enforce public functions' (name, args, return value type) module should implement.
+
+Protocol - extends module functionality without modification to
+modules source code. 
+
+Protocol implementations can be defined for following built-in types:
+Any
+Atom
+BitString
+Float
+Function
+Integer
+List
+Map
+PID
+Port
+Record
+Reference
+Tuple
+
++
+
+custom Structs
